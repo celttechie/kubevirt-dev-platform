@@ -1,0 +1,27 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachineInstance
+metadata:
+  name: alpine-test
+  namespace: default
+spec:
+  domain:
+    devices:
+      disks:
+        - name: containerdisk
+          disk:
+            bus: virtio
+      interfaces:
+        - name: default
+          masquerade: {}
+    resources:
+      requests:
+        memory: 256Mi
+        cpu: "1"
+  networks:
+    - name: default
+      pod: {}
+  volumes:
+    - name: containerdisk
+      containerDisk:
+        image: quay.io/kubevirt/cirros-container-disk-demo:latest
+  terminationGracePeriodSeconds: 0

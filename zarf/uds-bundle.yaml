@@ -1,0 +1,11 @@
+kind: UDSBundle
+metadata:
+  name: uds-virtualization-bundle
+  description: "Enterprise UDS Bundle for Air-Gapped Virtual Machine Workloads (KubeVirt + CDI)"
+  version: "0.1.0"
+  architecture: "amd64"
+
+packages:
+  - name: kubevirt-stack
+    repository: "ghcr.io/defenseunicorns/packages/uds/kubevirt-stack"
+    ref: "1.3.1"

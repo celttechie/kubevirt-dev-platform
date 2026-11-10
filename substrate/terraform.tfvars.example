@@ -1,0 +1,12 @@
+libvirt_uri       = "qemu+ssh://admin@kvm-host.example.com/system"
+vm_name           = "kubevirt-sandbox-vm"
+vm_memory_mb      = 32768
+vm_vcpu           = 8
+storage_pool_name = "nvme_pool" # Libvirt storage pool for VM disk images
+base_image_source = "https://cloud-images.ubuntu.com/releases/22.04/release/ubuntu-22.04-server-cloudimg-amd64.img"
+disk_size_bytes   = 128849018880 # 120 GB
+network_name      = "default"
+vm_mac            = "52:54:00:22:6b:50"
+vm_ip             = "192.168.122.50"
+network_gateway   = "192.168.122.1"
+admin_username    = "admin"

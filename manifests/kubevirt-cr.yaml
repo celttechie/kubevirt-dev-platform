@@ -1,0 +1,20 @@
+apiVersion: kubevirt.io/v1
+kind: KubeVirt
+metadata:
+  name: kubevirt
+  namespace: kubevirt
+spec:
+  certificateRotateStrategy: {}
+  configuration:
+    developerConfiguration:
+      # Strictly enforce hardware KVM acceleration (fail if /dev/kvm is missing)
+      useEmulation: false
+      featureGates:
+        - DataVolumes
+        - LiveMigration
+        - HotplugVolumes
+        - CPUManager
+        - ExpandDisks
+  customizeComponents: {}
+  imagePullPolicy: IfNotPresent
+  workloadUpdateStrategy: {}

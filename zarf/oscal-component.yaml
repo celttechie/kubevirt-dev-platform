@@ -1,0 +1,24 @@
+component-definition:
+  uuid: 550e8400-e29b-41d4-a716-446655440000
+  metadata:
+    title: KubeVirt Virtual Machine Workload DoD IL5 OSCAL Component Definition
+    last-modified: "2026-11-10T00:00:00Z"
+    version: "1.0.0"
+    oscal-version: "1.0.0"
+  components:
+    - uuid: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+      type: software
+      title: KubeVirt Virtualization Subsystem
+      description: Cloud-native virtualization engine providing hypervisor isolation for VM workloads.
+      purpose: Run virtual machines securely alongside containerized workloads.
+      control-implementations:
+        - uuid: 7ba7b810-9dad-11d1-80b4-00c04fd430c9
+          source: https://github.com/defenseunicorns/lula
+          description: Implementation of DoD IL5 controls for virtual machine workloads.
+          implemented-requirements:
+            - uuid: 8ba7b810-9dad-11d1-80b4-00c04fd430ca
+              control-id: ac-3
+              description: Access enforcement ensuring VMs are sandboxed with restricted host access.
+            - uuid: 9ba7b810-9dad-11d1-80b4-00c04fd430cb
+              control-id: sc-7
+              description: Boundary protection ensuring VM networks route through defined cluster interfaces.

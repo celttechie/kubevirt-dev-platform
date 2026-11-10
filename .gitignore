@@ -1,0 +1,46 @@
+# Terraform / OpenTofu
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# SSH keys & secrets (keep sensitive keys local)
+.ssh/
+substrate/keys/
+
+# Kubernetes & Local Configurations
+kubeconfig
+*.kubeconfig
+.kube/
+
+# Python & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.ruff_cache/
+.pytest_cache/
+
+# OS / Editor
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Build artifacts & packages
+build/
+*.tar.zst
+*.iso
+*.qcow2
+*.img

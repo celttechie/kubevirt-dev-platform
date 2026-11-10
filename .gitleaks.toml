@@ -1,0 +1,16 @@
+title = "gitleaks config for kubevirt-dev-platform"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Global allowlist for public keys, templates, and example files"
+paths = [
+  '''\.pub$''',
+  '''terraform\.tfvars\.example$''',
+  '''templates/''',
+  '''docs/'''
+]
+regexes = [
+  '''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5[0-9A-Za-z+/=]+'''
+]
