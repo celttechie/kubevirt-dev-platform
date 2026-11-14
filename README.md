@@ -63,13 +63,6 @@ Key architectural and security decisions are formally documented:
 
 ---
 
-## Upstream & Showcase Documentation
-
-- **[CNCF Upstream Contribution Plan](docs/cncf-contribution-plan.md):** Target issues in `kubevirt/kubevirt` and `kubevirt/containerized-data-importer`, developer inner loops for `virtctl` and `cdi-importer`, and community guidelines.
-- **[Defense Unicorns UDS VM Showcase](docs/defense-unicorns-uds-vm-showcase.md):** Mapping platform architecture to the Senior Software Engineer - Virtual Machines role, air-gapped packaging with Zarf, and continuous compliance with Lula OSCAL.
-
----
-
 ## Security & Deterministic SSH Architecture
 
 Unlike ephemeral setups that disable SSH host key checking (`StrictHostKeyChecking=no`), this platform enforces **cryptographically deterministic SSH**:
@@ -147,13 +140,11 @@ kubevirt-dev-platform/
 │       └── ci.yml                  # GitHub Actions CI: Gitleaks, ShellCheck, OpenTofu, YAML
 ├── .gitleaks.toml                  # Secret scanning configuration
 ├── docs/
-│   ├── adr/                        # Architecture Decision Records
-│   │   ├── 0001-dedicated-nested-hypervisor-on-bare-metal-nvme.md
-│   │   ├── 0002-deterministic-ssh-and-strict-host-verification.md
-│   │   ├── 0003-network-routing-and-disconnected-delivery-model.md
-│   │   └── 0004-instant-baseline-snapshots-for-destructive-testing.md
-│   ├── cncf-contribution-plan.md   # Roadmap for KubeVirt & CDI upstream contributions
-│   └── defense-unicorns-uds-vm-showcase.md # Alignment with UDS VM mission
+│   └── adr/                        # Architecture Decision Records
+│       ├── 0001-dedicated-nested-hypervisor-on-bare-metal-nvme.md
+│       ├── 0002-deterministic-ssh-and-strict-host-verification.md
+│       ├── 0003-network-routing-and-disconnected-delivery-model.md
+│       └── 0004-instant-baseline-snapshots-for-destructive-testing.md
 ├── Makefile                        # Top-level orchestration driver
 ├── substrate/                      # OpenTofu infrastructure definition
 │   ├── main.tf                     # Libvirt domain with host-passthrough & NVMe storage
